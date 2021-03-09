@@ -1,39 +1,22 @@
 using System;
 
-namespace Personas
+namespace Alumnos 
 {
-     class Persona
-    {  
-        public string name; 
-        public int age; 
-        public string lastname;
+    class Alumno : Persona
+    {
 
-        public string nombrecompleto
+        public int matricula; 
+        static public string escuela = "CRESP"; 
+        public Alumno (string nombre, string apellido, int edad, int matricula, string escuela) : base(nombre, edad, apellido)
         {
-            get => this.name + " " + this.lastname;
-        }
+            this.matricula = matricula;
 
-        private string coloFavorito;
-
-        public string ColorFavorito
-        {
-            get => "color" + this.coloFavorito;
-
-            set => this.coloFavorito = value;
-        }
-         public Persona(string name, int age, string lastname)
-        {
-            this.name = name;
-            this.age = age;
-            this.lastname= lastname; 
-            
         }
 
 
-        public void saludar()
+        public override void saludar()
         {
-            Console.WriteLine("Hola! mi nombre es " + name + " " + lastname + " y tengo " + age + " anios." );
+            Console.WriteLine("Hola, mi nombre es " + this.nombrecompleto + " y soy estudiante en " + Alumno.escuela + " con matrticula " + this.matricula);
         }
-    }
-
+    }    
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Personas
+namespace Alumnos
 {
 
 
@@ -30,8 +30,17 @@ namespace Personas
 
 
                 persona1.ColorFavorito = "morado";
+
+                persona1.saludar();
                 
             }
+
+
+
+            Alumno alumno1 = new Alumno("Jose", "Talamantes", 20, 5243, "Palmore");
+            Console.WriteLine("Primer Alumno: " + alumno1.nombrecompleto);
+            alumno1.saludar();
+
 
 
 
