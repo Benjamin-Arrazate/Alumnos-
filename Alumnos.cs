@@ -18,5 +18,8 @@ namespace Alumnos
         {
             Console.WriteLine("Hola, mi nombre es " + this.nombrecompleto + " y soy estudiante en " + Alumno.escuela + " con matrticula " + this.matricula);
         }
+
+
     }    
+
 }

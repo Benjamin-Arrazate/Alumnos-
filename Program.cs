@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic; 
 
 namespace Alumnos
 {
@@ -40,6 +41,32 @@ namespace Alumnos
             Alumno alumno1 = new Alumno("Jose", "Talamantes", 20, 5243, "Palmore");
             Console.WriteLine("Primer Alumno: " + alumno1.nombrecompleto);
             alumno1.saludar();
+
+            Materia programacion1 = new Materia("Programacion I", 2);
+            Console.WriteLine("La materia de " + programacion1.nombre + " se ve en " + programacion1.semestre);
+
+            Materia inteligenciaArtificial = new Materia("Inteligencia Artificial", 2);
+            Console.WriteLine("La materia de " + programacion1.nombre + " se ve en " + programacion1.semestre);
+
+
+            List<Materia> materiasDeInteres = new List<Materia>();
+            materiasDeInteres.Add(programacion1);
+            materiasDeInteres.Add(inteligenciaArtificial);
+            materiasDeInteres.Add(new Materia("Sistemas Interactivos I",7));
+
+            Console.WriteLine("La materia de " + materiasDeInteres[2].nombre + " se ve en " + materiasDeInteres[2].NombreSemestre);
+            Console.WriteLine("Me interesan " + materiasDeInteres.Count + " materias");
+
+            for (int i = 0; i < materiasDeInteres.Count; i++)
+            {
+                Console.WriteLine(materiasDeInteres[i].nombre);
+            }
+            Console.WriteLine(" . . . ");
+            materiasDeInteres.Remove(programacion1);
+            Console.WriteLine("Me interesan " + materiasDeInteres.Count + " materias");
+            Console.WriteLine("Primer Materia ahora es: " + materiasDeInteres[0].nombre);
+
+            
 
 
 
