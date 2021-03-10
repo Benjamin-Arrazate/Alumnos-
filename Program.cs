@@ -66,6 +66,15 @@ namespace Alumnos
             Console.WriteLine("Me interesan " + materiasDeInteres.Count + " materias");
             Console.WriteLine("Primer Materia ahora es: " + materiasDeInteres[0].nombre);
 
+            Materia materiaBorrar = null;
+            for (int i = 0; i < materiasDeInteres.Count; i++)
+            {
+                if (materiasDeInteres[i].nombre == "Sistemas Interactivos I")
+                {
+                    materiaBorrar = materiasDeInteres[i];
+                }
+            }
+
             
 
 
