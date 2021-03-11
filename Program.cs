@@ -72,10 +72,18 @@ namespace Alumnos
                 if (materiasDeInteres[i].nombre == "Sistemas Interactivos I")
                 {
                     materiaBorrar = materiasDeInteres[i];
+
+                    break;
                 }
             }
 
-            
+            if (materiaBorrar != null)
+            {
+                materiasDeInteres.Remove(materiaBorrar);
+            }
+
+            Console.WriteLine("Ahora me interesan " + materiasDeInteres.Count + " materia");
+            Console.WriteLine("Primer Materia ahora es: " + materiasDeInteres[0].nombre);
 
 
 
